@@ -91,7 +91,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className='text-base text-slate-300 text-center mt-10'>
-                © 2025 The Lonavala Stays All rights reserved | Designed By RateBotAi
+                © 2025 The Cloudnine All rights reserved | Designed By RateBotAi
             </div>
         </div>
     );

@@ -17,7 +17,7 @@ const Homepage_LetUsGuide = () => {
                     {/* right section  */}
                     <div className="flex-1 flex flex-col gap-6 md:gap-14 text-Bg_Primary">
                         <span className="text-base md:text-xl font-light text-center md:text-left">
-                            Escape to breathtaking villas in Lonavala, Pawna Lake, or Madh Island with private pools and serene views for a memorable getaway.
+                        Discover the charm of Alibaug, a coastal paradise known for its pristine beaches, lush greenery, and luxurious private villas.
                         </span>
                         <span className="text-center md:text-left">
                             <Link to={'/contact'} className="px-6 py-3 bg-primary text-lg md:text-xl rounded-2xl inline-block">

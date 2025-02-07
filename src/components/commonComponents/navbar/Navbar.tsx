@@ -64,12 +64,12 @@ const Navbar = () => {
                     <div className='flex justify-center bg-Bg_secondary items-center gap-4  p-4'>
                         <div className='flex items-center gap-2 font-semibold md:font-medium'>
                             <span className='text-base md:text-2xl'><IoIosMail /></span>
-                            <span className='text-sm md:text-xl'>Lonavalastays@gmail.com</span>
+                            <span className='text-sm md:text-xl'>info@hotelscloudnine.com</span>
                         </div>
                         <span className='text-slate-400 text-xl'>{'|'}</span>
                         <div className='flex items-center gap-2 font-semibold md:font-medium'>
                             <span className='text-base md:text-xl'><IoIosCall /></span>
-                            <span className='text-sm md:text-xl'>9394607407</span>
+                            <span className='text-sm md:text-xl'>7065890277</span>
                         </div>
                     </div>
                     {/* Main Nav  */}
@@ -104,7 +104,7 @@ const Navbar = () => {
                                                         <div className="absolute top-full left-0 hidden group-hover:block bg-white border shadow-md rounded-md min-w-[200px] z-10 transition-all duration-300">
                                                             <ul className="py-2">
                                                                 {propertyData?.map((property: any, index: any) => (
-                                                                    <li key={index} className="px-4 py-2 hover:bg-gray-100">
+                                                                    <li key={index} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                                                         <div
                                                                             onClick={() => handleNavigate(property)}
                                                                             className="block text-black">

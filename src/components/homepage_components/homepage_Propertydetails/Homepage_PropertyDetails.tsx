@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import { FaBed, FaShower, FaSwimmingPool, FaCar } from "react-icons/fa";
-
+import { FaBed, FaShower, FaSwimmingPool, FaCar, FaWifi } from "react-icons/fa";
+import { TbAirConditioning } from "react-icons/tb";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper modules
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
@@ -20,6 +20,10 @@ const PropertyDetails = () => {
                 return <FaSwimmingPool />;
             case 'car':
                 return <FaCar />;
+            case 'wifi':
+                return <FaWifi />;
+            case 'ac':
+                return <TbAirConditioning />;
             default:
                 return null;
         }
@@ -133,12 +137,12 @@ const PropertyDetails = () => {
                         </p>
                     </div>
 
-                    {/* Features Section */}
+                    {/* Services Section */}
                     <div className="flex-1 w-full rounded-md bg-white p-6  flex flex-col gap-8">
-                        <h2 className="text-xl font-semibold mb-4">Features</h2>
+                        <h2 className="text-xl font-semibold mb-4">Services</h2>
                         <hr />
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            {propertyData.property_features?.map((feature: string, index: number) => (
+                            {propertyData.property_services?.map((feature: string, index: number) => (
                                 <div key={index} className="flex items-center gap-2">
                                     <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                                     <span>{feature}</span>

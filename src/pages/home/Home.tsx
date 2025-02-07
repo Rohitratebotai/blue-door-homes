@@ -19,7 +19,7 @@ const Home = () => {
                 <Homepage_Properties />
             </div>
             <div>
-                <Parallax image={img} title={'Title'} description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aperiam, recusandae dolore illum, perferendis ipsum soluta assumenda vitae, esse tempore magnam molestias reiciendis? Nisi ad commodi quibusdam asperiores ab dolorum?'} />
+                <Parallax image={img} title={'Experience Luxury Across Three Stunning Properties'} description={'When you think of taking a holiday - what comes to mind? You taken far away, from the daily hustle and bustle of life! Close your eyes and imagine what that would be like. At Samudra Darshan we offer you a patch of holiday heaven right here on earth. Located just off the coast and within two minutes walk of Akshi Beach come experience the class, the luxury and the scenic beauty of Akshi beach.'} />
             </div>
             <div className=" px-4 lg:px-20 ">
                 <Amenities />

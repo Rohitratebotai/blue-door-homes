@@ -14,12 +14,12 @@ interface FeatureData {
 const Homepage_WhyChoose = () => {
     const featureData: FeatureData = {
         images: [img1, img2],
-        title: "Why Choose Lonavala Stays?",
-        description: "Gain luxury and comfort at Lonavala Stays, perfect for relaxation, celebration, or adventure.",
+        title: "Why Choose Hotel Cloudnine?",
+        description: "Gain luxury and comfort at Hotel Cloudnine, perfect for relaxation, celebration, or adventure.",
         features: [
-            "Quick getaways near Lonavala & Pawna.",
+            "Quick getaways near Hotel Cloudnine.",
             "Ideal majestic villas for any occasion.",
-            "Enjoy exquisite cuisine by top chefs.",
+            "Enjoy exquisite cuisine by top foods.",
             "Perfect for creatives and adventurers.",
             "Tailored experiences for all visitors.",
             "Relax, celebrate, or create memories."

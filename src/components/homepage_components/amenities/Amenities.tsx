@@ -1,8 +1,6 @@
 
-import { TbAirConditioning } from "react-icons/tb";
-import { FaPersonSwimming } from "react-icons/fa6";
-import { CgGym } from "react-icons/cg";
-import { FaWifi } from "react-icons/fa";
+import { FaSwimmingPool, FaCar, FaMusic, FaTv, FaWifi } from "react-icons/fa";
+import { MdWifiCalling3 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 interface AmenitiesData {
@@ -16,33 +14,33 @@ const Amenities = () => {
     const amenitiesData: AmenitiesData[] = [
         {
             id: 1,
-            icon: <TbAirConditioning />,
-            title: "Airport Pick-up Service",
+            icon: <FaSwimmingPool />,
+            title: "Private Pool",
         },
         {
             id: 2,
-            icon: <FaPersonSwimming />,
-            title: "Laundry Services",
+            icon: <MdWifiCalling3 />,
+            title: "Service on call",
         },
         {
             id: 3,
-            icon: <CgGym />,
-            title: "Breakfast in Bed",
+            icon: <FaTv />,
+            title: "Flat-screen TV",
         },
         {
             id: 4,
             icon: <FaWifi />,
-            title: "Housekeeper Services",
+            title: "Wi-Fi access",
         },
         {
             id: 5,
-            icon: <FaWifi />,
-            title: "Wifi & Internet",
+            icon: <FaCar />,
+            title: "Parking area",
         },
         {
             id: 6,
-            icon: <CgGym />,
-            title: "Air Conditioning",
+            icon: <FaMusic />,
+            title: "Sound system",
         },
     ]
 
@@ -54,7 +52,7 @@ const Amenities = () => {
                     <div className="flex flex-col gap-10">
                         <h3 className='text-2xl sm:text-3xl md:text-6xl font-medium'>The Essentials</h3>
                         <p className="text-base text-justify md:text-xl font-light">Discover the exceptional amenities that make your stay at Aashiyaanaa Villas unforgettable! Whether you're looking to unwind, embark on an adventure, or enjoy a perfect blend of both, our villas provide a thoughtfully curated range of comforts and features, ensuring an extraordinary experience every time.</p>
-                        <Link to="/" className="text-primary font-semibold text-sm md:text-2xl">Know More...</Link>
+                        <Link to="/contact" className="text-primary font-semibold text-sm md:text-2xl">Know More...</Link>
                     </div>
                 </div>
                 {/* Amenities  */}

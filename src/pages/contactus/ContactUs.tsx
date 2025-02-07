@@ -7,11 +7,8 @@ const contactInfo = [
         icon: "📍",
         text: "Aashiyaanaa Villas, House No 118, opposite ZP school, Aapti Dhamandara, Lonavala, Maharashtra - 410106",
     },
-    { icon: "📞", text: "+91-9820636957" },
-    { icon: "📞", text: "+91-9833412095" },
-    { icon: "📞", text: "+91-9619434981" },
-    { icon: "📞", text: "+91-9819487056" },
-    { icon: "✉️", text: "aashiyaanaavillas@gmail.com" },
+    { icon: "📞", text: "+91-7065890277" },
+    { icon: "✉️", text: "info@hotelscloudnine.com" },
 ];
 
 const ContactUs = () => {
@@ -26,9 +23,9 @@ const ContactUs = () => {
                 {/* Left Section */}
                 <div className="md:w-1/2 text-gray-600 text-lg leading-relaxed">
                     <span>
-                        Looking for the perfect villa on rent in Lonavala, Pawna Lake, or Madh
-                        Island? At Aashiyaanaa Villas, we offer luxury escapes with private
-                        pools, breathtaking views, and unforgettable experiences.
+                        Discover the epitome of comfort and elegance with CloudNine, a collection of three exquisite properties: Shikar Resort, Samundra Darshan, and Casa 3 BHK. Whether you're seeking a serene retreat in nature, breathtaking ocean views, or a luxurious private stay, we have the perfect destination for you.
+
+                        Enjoy top-tier amenities, including ample parking, scenic views, well-furnished accommodations, high-speed WiFi, 24/7 security, and personalized services to make your stay truly unforgettable. Book now and experience the best in hospitality with CloudNine!
                     </span>
                 </div>
 
