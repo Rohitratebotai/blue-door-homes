@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-import { SiReactivex } from "react-icons/si";
+// import { SiReactivex } from "react-icons/si";
 
 
 import img1 from '../../../assets/HomePage_banner1.jpg'
@@ -12,10 +12,10 @@ import img3 from '../../../assets/HomePage_banner3.jpg'
 import Heading from '../../commonComponents/heading/Heading';
 
 interface reviews {
-    icon: any,
+    // icon: any,
     review: string,
     clientName: string,
-    thumbnail: string
+    // thumbnail: string
 }
 
 
@@ -23,40 +23,34 @@ const Homepage_Testimonial = () => {
 
     const data: reviews[] = [
         {
-            icon: <SiReactivex />,
-            review: "This product exceeded my expectations in every way. The quality and attention to detail are fantastic",
-            clientName: 'Alice Smith',
-            thumbnail: img1
+            // icon: <SiReactivex />,
+            review: "Excellent services. Anybody who has stayed will not have any adverse remark. Stay, Food, Location (very close to beach) are Superb. Very neat and clean environment throughout the Resort",
+            clientName: 'Janardhanan Madhayam',
+            // thumbnail: img1
         },
         {
-            icon: <SiReactivex />,
-            review: "Fantastic experience! The product arrived quickly, was beautifully packaged, and performs wonderfully.",
-            clientName: 'Mark Johnson',
-            thumbnail: img2
+            // icon: <SiReactivex />,
+            review: "We were 3 families and stayed here for 3 nights. Wonderful experience. Food taste is awesome. Rooms are well maintained and cleaned. Kaka and whole staff was very supportive. Location is just 5 mins to Aksi beach.",
+            clientName: 'Dhiraj Dighe',
+            // thumbnail: img2
         },
         {
-            icon: <SiReactivex />,
-            review: "Impressive quality and excellent customer support. I had a small issue that was resolved quickly. Very happy with",
-            clientName: 'Emily Davis',
-            thumbnail: img3
+            // icon: <SiReactivex />,
+            review: "Such a stunning place, it's super close to the beach (a pristine clean beach). We went during the off season when the staff too was on leave, and the owner himself was hosting us with rapt attention to our needs.",
+            clientName: 'Nirmiti Kamat',
+            // thumbnail: img3
         },
         {
-            icon: <SiReactivex />,
-            review: "Affordable, reliable, and exactly what I was looking for. The product works as described and I couldn’t be happier.",
-            clientName: 'Michael Brown',
-            thumbnail: img1
+            // icon: <SiReactivex />,
+            review: "perfect getaway from daily routine, wonderful place, good service, also very hygienic and clean, hardly 5 min away from beach so its a perfect place.",
+            clientName: 'Leena Manjrekar',
+            // thumbnail: img1
         },
         {
-            icon: <SiReactivex />,
-            review: "Five stars! This product truly lives up to the hype. The features and durability make it worth every penny.",
-            clientName: 'Jessica Taylor',
-            thumbnail: img1
-        },
-        {
-            icon: <SiReactivex />,
-            review: "Quick delivery and excellent quality, couldn’t be more satisfied. I use it daily, and it works perfectly each time.",
-            clientName: 'Daniel Wilson',
-            thumbnail: img2
+            // icon: <SiReactivex />,
+            review: "We had a 2 days stay at Samudra Darshan and have enjoyed the entire weekend. The Owner Mr Raut is a really nice person and helped us throughout.",
+            clientName: 'Sannah Nathanr',
+            // thumbnail: img1
         }
     ];
 
@@ -103,11 +97,11 @@ const Homepage_Testimonial = () => {
                     {data?.map((item, index) => (
                         <SwiperSlide key={index}>
                             <div className="h-[35vh] lg:h-[50vh] w-full border-2 bg-[#fafafa] border-[#949494] flex flex-col justify-center items-start gap-2 lg:gap-5 px-2 lg:px-5 rounded-sm lg:rounded-md">
-                                <span className='text-3xl lg:text-5xl'>{item.icon}</span>
+                                {/* <span className='text-3xl lg:text-5xl'>{item.icon}</span> */}
                                 <p className='text-sm text-gray-600 lg:text-lg'>{item.review}</p>
                                 <div className='flex w-full justify-between items-center'>
                                     <p className='font-normal lg:font-semibold text-sm lg:text-base'>{item.clientName}</p>
-                                    <img className='w-8 h-8 lg:w-16 lg:h-16  rounded-full' src={item.thumbnail} alt="CLientImage" />
+                                    {/* <img className='w-8 h-8 lg:w-16 lg:h-16  rounded-full' src={item.thumbnail} alt="CLientImage" /> */}
                                 </div>
                             </div>
                         </SwiperSlide>

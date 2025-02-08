@@ -1,4 +1,4 @@
-import img1 from '../../../assets/HomePage_banner1.jpg';
+import img1 from '../../../assets/shrikar_images/shikar_b3.jpg';
 import img2 from '../../../assets/HomePage_banner3.jpg';
 import { MdOutlineDone } from 'react-icons/md';
 import { FaArrowRightLong } from 'react-icons/fa6';

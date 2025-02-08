@@ -1,6 +1,7 @@
-import img1 from '../../../assets/HomePage_banner1.jpg'
-import img2 from '../../../assets/HomePage_banner2.jpg'
-import img3 from '../../../assets/HomePage_banner3.jpg'
+import img1 from '../../../assets/shrikar_images/shikar_b3.jpg'
+import img4 from '../../../assets/shrikar_images/shikar_b1.jpg'
+import img2 from '../../../assets/samundra_images/samundra_b1.jpg'
+import img3 from '../../../assets/casa_images/casa_b2.jpg'
 
 interface Room {
     title: string,
@@ -28,7 +29,7 @@ const ExclusiveService_Card = () => {
         },
         {
             title: "Celebrations That Last a Lifetime. ",
-            thumbnail: img1,
+            thumbnail: img4,
             description: "Create unforgettable memories with events tailored to make your special day truly extraordinary."
         },
     ];

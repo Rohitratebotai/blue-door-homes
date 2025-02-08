@@ -87,21 +87,21 @@ export const propertyData = [
         status: "Available",
         property_details: [
             {
-                type: "Bedrooms",
-                value: "10"
+                type: "Games room",
+                value: "available"
             },
             {
-                type: "Property_Size",
-                value: "5000 sqft"
+                type: "Beach Access",
+                value: "available"
             },
             {
-                type: "parking",
-                value: "Pawna Lake, Lonavala"
+                type: "Night Club",
+                value: "available"
             },
             {
-                type: "Private_Swimming_Pool",
-                value: "Available"
-            }
+                type: "Casino",
+                value: "available"
+            },
         ],
         property_aditional_details: [
             {
@@ -116,15 +116,15 @@ export const propertyData = [
         property_address: [
             {
                 type: "Place",
-                value: "Lonavala"
+                value: "Sameera Palms Nagaon Beach Road"
             },
             {
                 type: "City",
-                value: "Pune"
+                value: "Alibaug"
             },
             {
                 type: "Area",
-                value: "Pawna Lake"
+                value: "Nagaon"
             },
             {
                 type: "State",
@@ -132,7 +132,7 @@ export const propertyData = [
             },
             {
                 type: "Postal Code",
-                value: "410401"
+                value: "402204"
             },
             {
                 type: "Country",
@@ -278,21 +278,21 @@ export const propertyData = [
         status: "Available",
         property_details: [
             {
-                type: "Bedrooms",
-                value: "6"
+                type: "Games room",
+                value: "available"
             },
             {
-                type: "Property_Size",
-                value: "6000 sqft"
+                type: "Beach Access",
+                value: "available"
             },
             {
-                type: "parking",
-                value: "Malshej Ghat, Lonavala"
+                type: "Night Club",
+                value: "available"
             },
             {
-                type: "Private_Swimming_Pool",
-                value: "Available"
-            }
+                type: "Casino",
+                value: "available"
+            },
         ],
         property_aditional_details: [
             {

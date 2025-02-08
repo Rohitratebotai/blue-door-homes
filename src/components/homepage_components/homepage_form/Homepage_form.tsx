@@ -41,10 +41,10 @@ const Homepage_form = () => {
         e.preventDefault();
 
         emailjs.send(
-            "service_wmcqoat",
-            "template_xeulgak",
+            "service_eiggoy7",
+            "template_cu8n9rt",
             inputs,
-            "WR79NcIwzdqNzvr79"
+            "jd2qaIcmVDMEFUY_U"
         )
             .then((response) => {
                 toast.success('Email sent successfully!', {

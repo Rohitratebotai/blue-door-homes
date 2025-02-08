@@ -6,7 +6,7 @@ import Homepage_Properties from "../../components/homepage_components/homepage_P
 import Homepage_Testimonial from "../../components/homepage_components/homepage_testimonial/Homepage_Testimonial"
 import Homepage_WhyChoose from "../../components/homepage_components/homepage_whychoose/Homepage_WhyChoose"
 import Slider from "../../components/homepage_components/slider/Slider"
-import img from '../../assets/HomePage_banner3.jpg'
+import img from '../../assets/parallax_img.jpg'
 
 const Home = () => {
     // Slider Images 
