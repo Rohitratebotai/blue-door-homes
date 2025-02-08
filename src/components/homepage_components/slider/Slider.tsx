@@ -36,7 +36,7 @@ const Slider = () => {
             {/* Overlay Form */}
             <div className='z-20 absolute inset-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center'>
                 <div className='flex flex-col items-center gap-5 text-center tracking-wide capitalize'>
-                    <p className='text-3xl font-medium text-[#fff] '>Your Dream Escape Awaits</p>
+                    <p className='text-3xl hidden md:block font-medium text-[#fff] '>Your Dream Escape Awaits</p>
                     <div>
                         <Homepage_form />
                     </div>
