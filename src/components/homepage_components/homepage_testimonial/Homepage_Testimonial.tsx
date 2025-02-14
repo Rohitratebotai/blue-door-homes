@@ -6,9 +6,9 @@ import { GrFormPrevious } from "react-icons/gr";
 // import { SiReactivex } from "react-icons/si";
 
 
-import img1 from '../../../assets/HomePage_banner1.jpg'
-import img2 from '../../../assets/HomePage_banner2.jpg'
-import img3 from '../../../assets/HomePage_banner3.jpg'
+// import img1 from '../../../assets/HomePage_banner1.jpg'
+// import img2 from '../../../assets/HomePage_banner2.jpg'
+// import img3 from '../../../assets/HomePage_banner3.jpg'
 import Heading from '../../commonComponents/heading/Heading';
 
 interface reviews {

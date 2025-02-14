@@ -23,8 +23,8 @@ const Homepage_form = () => {
     const [showCheckInCalendar, setShowCheckInCalendar] = useState(false);
     const [showCheckOutCalendar, setShowCheckOutCalendar] = useState(false);
 
-    const guests = ["Guest 1", "Guest 2", "Guest 3"];
-    const villas = ["Villa 1", "Villa 2", "Villa 3"];
+    const guests = ["0-5", "6-10", "10-15", "16-20"];
+    const villas = ["Shrikar Resort", "Samundra Darshan", "Casa 3 bhk"];
 
     const handleDateChange = (date: Date, inputName: string) => {
         // Use Luxon to handle timezone

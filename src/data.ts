@@ -93,24 +93,16 @@ export const propertyData = [
             {
                 type: "Beach Access",
                 value: "available"
-            },
-            {
-                type: "Night Club",
-                value: "available"
-            },
-            {
-                type: "Casino",
-                value: "available"
-            },
+            }
         ],
         property_aditional_details: [
             {
                 type: "smoking",
-                value: "Not Allowed"
+                value: ""
             },
             {
                 type: "Drinking ",
-                value: "Not Allowed"
+                value: ""
             },
         ],
         property_address: [
@@ -188,24 +180,16 @@ export const propertyData = [
             {
                 type: "Beach Access",
                 value: "available"
-            },
-            {
-                type: "Night Club",
-                value: "available"
-            },
-            {
-                type: "Casino",
-                value: "available"
-            },
+            }
         ],
         property_aditional_details: [
             {
                 type: "smoking",
-                value: "Not Allowed"
+                value: ""
             },
             {
                 type: "Pets ",
-                value: "Not Allowed"
+                value: ""
             },
         ],
         property_address: [
@@ -284,24 +268,16 @@ export const propertyData = [
             {
                 type: "Beach Access",
                 value: "available"
-            },
-            {
-                type: "Night Club",
-                value: "available"
-            },
-            {
-                type: "Casino",
-                value: "available"
-            },
+            }
         ],
         property_aditional_details: [
             {
                 type: "smoking",
-                value: "Not Allowed"
+                value: ""
             },
             {
                 type: "Pets ",
-                value: "Not Allowed"
+                value: ""
             },
         ],
         property_address: [
