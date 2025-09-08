@@ -1,7 +1,7 @@
-import img1 from '../../../assets/shrikar_images/shikar_b3.jpg'
-import img4 from '../../../assets/shrikar_images/shikar_b1.jpg'
-import img2 from '../../../assets/samundra_images/samundra_b1.jpg'
-import img3 from '../../../assets/casa_images/casa_b2.jpg'
+import img1 from '../../../assets/iIra_images/image_1.jpg'
+import img4 from '../../../assets/iIra_images/image_29.jpg'
+import img2 from '../../../assets/iIra_images/image_25.jpg'
+import img3 from '../../../assets/iIra_images/image_18.jpg'
 
 interface Room {
     title: string,
@@ -43,7 +43,7 @@ const ExclusiveService_Card = () => {
                         return (
                             <div
                                 key={item.title}
-                                className="group relative h-[50vh] md:h-[65vh] w-full mb-3  rounded-lg overflow-hidden"
+                                className="group relative h-[50vh] md:h-[72vh] w-full mb-3  rounded-lg overflow-hidden"
                             >
                                 <img
                                     className="object-cover h-4/6 w-full  rounded-lg "

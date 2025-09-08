@@ -24,7 +24,7 @@ const Homepage_form = () => {
     const [showCheckOutCalendar, setShowCheckOutCalendar] = useState(false);
 
     const guests = ["0-5", "6-10", "10-15", "16-20"];
-    const villas = ["Shrikar Resort", "Samundra Darshan", "Casa 3 bhk"];
+    const villas = ["Shrikar Resort", "iIRA Staysn", "Casa 3 bhk", "Lotus Hotel", "Panchavati Resort"];
 
     const handleDateChange = (date: Date, inputName: string) => {
         // Use Luxon to handle timezone

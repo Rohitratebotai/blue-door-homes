@@ -1,123 +1,136 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper modules
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCards } from 'swiper/modules';
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-// import { SiReactivex } from "react-icons/si";
-
-
-// import img1 from '../../../assets/HomePage_banner1.jpg'
-// import img2 from '../../../assets/HomePage_banner2.jpg'
-// import img3 from '../../../assets/HomePage_banner3.jpg'
+import { FaQuoteLeft } from "react-icons/fa";
 import Heading from '../../commonComponents/heading/Heading';
 
-interface reviews {
-    // icon: any,
+interface Review {
     review: string,
     clientName: string,
-    // thumbnail: string
+    rating?: number
 }
 
-
 const Homepage_Testimonial = () => {
-
-    const data: reviews[] = [
+    const data: Review[] = [
         {
-            // icon: <SiReactivex />,
-            review: "Excellent services. Anybody who has stayed will not have any adverse remark. Stay, Food, Location (very close to beach) are Superb. Very neat and clean environment throughout the Resort",
-            clientName: 'Janardhanan Madhayam',
-            // thumbnail: img1
+            review:
+                "Blue Door Homes gave us a truly cozy and homely experience. The interiors were beautifully designed and we felt relaxed the moment we walked in.",
+            clientName: "Rohan Mehta",
+            rating: 5,
         },
         {
-            // icon: <SiReactivex />,
-            review: "We were 3 families and stayed here for 3 nights. Wonderful experience. Food taste is awesome. Rooms are well maintained and cleaned. Kaka and whole staff was very supportive. Location is just 5 mins to Aksi beach.",
-            clientName: 'Dhiraj Dighe',
-            // thumbnail: img2
+            review:
+                "Perfect stay! The location in Ulwe is very convenient, close to shops and transport. The property was neat, well-maintained, and value for money.",
+            clientName: "Sneha Patil",
+            rating: 5,
         },
         {
-            // icon: <SiReactivex />,
-            review: "Such a stunning place, it's super close to the beach (a pristine clean beach). We went during the off season when the staff too was on leave, and the owner himself was hosting us with rapt attention to our needs.",
-            clientName: 'Nirmiti Kamat',
-            // thumbnail: img3
+            review:
+                "I stayed at Blue Door Homes with my family and we absolutely loved the warmth of the place. The staff was very helpful and made our stay stress-free.",
+            clientName: "Amit Khanna",
+            rating: 4,
         },
         {
-            // icon: <SiReactivex />,
-            review: "perfect getaway from daily routine, wonderful place, good service, also very hygienic and clean, hardly 5 min away from beach so its a perfect place.",
-            clientName: 'Leena Manjrekar',
-            // thumbnail: img1
+            review:
+                "A wonderful experience! The rooms were clean, spacious, and stylish. Special thanks to the team for making our stay so comfortable.",
+            clientName: "Priya Nair",
+            rating: 5,
         },
         {
-            // icon: <SiReactivex />,
-            review: "We had a 2 days stay at Samudra Darshan and have enjoyed the entire weekend. The Owner Mr Raut is a really nice person and helped us throughout.",
-            clientName: 'Sannah Nathanr',
-            // thumbnail: img1
-        }
+            review:
+                "The property feels welcoming and peaceful. Great interiors, good amenities, and friendly hosts. Would definitely come back!",
+            clientName: "Vikram Desai",
+            rating: 4,
+        },
     ];
 
+
+    const renderStars = (rating: number = 5) => {
+        return (
+            <div className="flex gap-1 mt-2">
+                {[...Array(5)].map((_, i) => (
+                    <svg
+                        key={i}
+                        className={`w-4 h-4 ${i < rating ? "text-yellow-400" : "text-gray-300"}`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                ))}
+            </div>
+        )
+    };
+
     return (
-        <div className=''>
-            <span className='text-center'>
-                <Heading title='Hear What Our Happy Guests Are Saying' />
-            </span>
-            {/* <div className='capitalize flex justify-center  px-4 sm:px-6 lg:px-10 '>
-                <p className='slide-title  border-b-2 border-primary text-center w-max py-2 text-2xl sm:text-3xl md:text-4xl text-primary'>
-                    Hear What Our Happy Guests Are Saying
-                </p>
-            </div> */}
-            <div className="relative w-full h-full px-4 sm:px-6 lg:px-10 pb-10 ">
-                <Swiper
-                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                    spaceBetween={10}
-                    slidesPerView={1} // Start with 1 slide for mobile
-                    // pagination={{ clickable: true }}
-                    navigation={{
-                        nextEl: '.NextElement',
-                        prevEl: '.PrevElement'
-                    }}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false
-                    }}
-                    breakpoints={{
-                        468: {
-                            slidesPerView: 2,
-                            spaceBetween: 15
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 20
-                        },
-                        1024: {
-                            slidesPerView: 4,
-                            spaceBetween: 30
-                        }
-                    }}
-                    className="w-full"
-                >
-                    {data?.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            <div className="h-[35vh] lg:h-[50vh] w-full border-2 bg-[#fafafa] border-[#949494] flex flex-col justify-center items-start gap-2 lg:gap-5 px-2 lg:px-5 rounded-sm lg:rounded-md">
-                                {/* <span className='text-3xl lg:text-5xl'>{item.icon}</span> */}
-                                <p className='text-sm text-gray-600 lg:text-lg'>{item.review}</p>
-                                <div className='flex w-full justify-between items-center'>
-                                    <p className='font-normal lg:font-semibold text-sm lg:text-base'>{item.clientName}</p>
-                                    {/* <img className='w-8 h-8 lg:w-16 lg:h-16  rounded-full' src={item.thumbnail} alt="CLientImage" /> */}
+        <div className="py-12 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <span className="block text-center mb-12">
+                    <Heading title="Hear What Our Happy Guests Are Saying" />
+                </span>
+
+                <div className="relative w-full">
+                    <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCards]}
+                        spaceBetween={24}
+                        slidesPerView={1}
+                        pagination={{
+                            clickable: true,
+                            bulletClass: 'swiper-pagination-bullet bg-primary w-2 h-2 inline-block rounded-full mx-1 opacity-60 cursor-pointer transition-opacity',
+                            bulletActiveClass: 'swiper-pagination-bullet-active opacity-100',
+                        }}
+                        navigation={{
+                            nextEl: '.NextElement',
+                            prevEl: '.PrevElement'
+                        }}
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false
+                        }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 24
+                            }
+                        }}
+                        className="testimonial-swiper pb-12"
+                    >
+                        {data?.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="h-auto min-h-64 bg-white border border-gray-200 shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary">
+                                    <div className="p-6 h-full flex flex-col">
+                                        <div className="mb-4">
+                                            <FaQuoteLeft className="text-primary text-3xl opacity-50" />
+                                        </div>
+                                        <p className="text-gray-700 flex-grow mb-4">{item.review}</p>
+                                        <div className="mt-auto">
+                                            {renderStars(item.rating)}
+                                            <p className="font-medium text-gray-900 mt-3">{item.clientName}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                <div className='absolute top-1/2 left-0 right-0 z-20 flex justify-between items-center px-1 md:px-5 transform -translate-y-1/2'>
-                    <div className='PrevElement flex text-xl md:text-2xl border justify-center items-center bg-white cursor-pointer h-10 w-10 md:h-14 md:w-14 rounded-full text-black'>
-                        <GrFormPrevious />
-                    </div>
-                    <div className='NextElement flex text-xl md:text-2xl border justify-center items-center bg-white cursor-pointer h-10 w-10 md:h-14 md:w-14 rounded-full text-black'>
-                        <MdOutlineNavigateNext />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    <div className="absolute top-1/2 left-0 right-0 z-20 flex justify-between items-center px-2 transform -translate-y-1/2">
+                        <button className="PrevElement flex justify-center items-center bg-white shadow-md hover:bg-primary hover:text-white transition-colors duration-300 cursor-pointer h-10 w-10 md:h-12 md:w-12 rounded-full text-gray-800 border border-gray-200">
+                            <GrFormPrevious className="text-xl md:text-2xl" />
+                        </button>
+                        <button className="NextElement flex justify-center items-center bg-white shadow-md hover:bg-primary hover:text-white transition-colors duration-300 cursor-pointer h-10 w-10 md:h-12 md:w-12 rounded-full text-gray-800 border border-gray-200">
+                            <MdOutlineNavigateNext className="text-xl md:text-2xl" />
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Homepage_Testimonial
+export default Homepage_Testimonial;

@@ -7,6 +7,7 @@ import Footer from "./components/commonComponents/footer/Footer"
 import ContactUs from "./pages/contactus/ContactUs"
 import Homepage_PropertyDetails from "./components/homepage_components/homepage_Propertydetails/Homepage_PropertyDetails"
 import About from "./pages/about/About"
+import ScrollToTop from "./ScrollTop"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <>
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

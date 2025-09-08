@@ -1,4 +1,4 @@
-import { FaBed, FaShower, FaSwimmingPool, FaCar } from "react-icons/fa";
+// import { FaBed, FaShower, FaSwimmingPool, FaCar } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 // Define the types for the property amenities
 interface Amenity {
@@ -18,7 +18,7 @@ interface Property {
 interface PropertyModalProps {
     property: Property | null; // Property can be null if not selected
     onClose: () => void; // onClose is a function that closes the modal
-    handleNavigate: (property: any) => void; // handleNavigate is a function that navigates to the property detail page
+    handleNavigate: (id: any) => void; // handleNavigate is a function that navigates to the property detail page
 }
 
 const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, handleNavigate }) => {
@@ -26,20 +26,20 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, handle
     if (!property) return null;
 
     // Function to render the correct icon based on the string identifier
-    const renderIcon = (iconName: string) => {
-        switch (iconName) {
-            case 'bed':
-                return <FaBed />;
-            case 'shower':
-                return <FaShower />;
-            case 'pool':
-                return <FaSwimmingPool />;
-            case 'car':
-                return <FaCar />;
-            default:
-                return null;
-        }
-    };
+    // const renderIcon = (iconName: string) => {
+    //     switch (iconName) {
+    //         case 'bed':
+    //             return <FaBed />;
+    //         case 'shower':
+    //             return <FaShower />;
+    //         case 'pool':
+    //             return <FaSwimmingPool />;
+    //         case 'car':
+    //             return <FaCar />;
+    //         default:
+    //             return null;
+    //     }
+    // };
 
     console.log(property.id);
 
@@ -47,7 +47,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, handle
         <section className="fixed inset-0 flex items-center justify-center w-full bg-black bg-opacity-50 z-50">
             <div className="relative bg-white flex flex-col md:flex-row gap-5 rounded-lg shadow-lg p-6 h-[70vh] md:h-fit w-[80%] overflow-y-auto overflow-x-hidden">
                 {/* property image  */}
-                <div className="flex-1 h-full">
+                <div className="flex-1 h-[70vh] object-cover">
                     <img src={property.property_img[0]} alt={property.property_name} className="w-full  md:h-full object-cover rounded-lg" />
                 </div>
                 {/* property details  */}
@@ -69,19 +69,19 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, handle
                         </div>
                         <hr />
                         {/* amenities  */}
-                        <div className="flex flex-col md:flex-row gap-3 items-start">
+                        {/* <div className="flex flex-col md:flex-row gap-3 items-start">
                             <h3 className="font-semibold ">Amenities:</h3>
                             <ul className="list-disc list-inside grid grid-cols-2 gap-4">
-                                {property.property_amenities.map((amenity: any, index: any) => (
+                                {property.property_amenities.splice(0, 4).map((amenity: any, index: any) => (
                                     <div className="flex items-center gap-3" key={index}>
                                         <span className="text-sm md:text-base" key={index}>{renderIcon(amenity.amenities_icon)}</span>
                                         <span className="text-sm md:text-base">{amenity.amenities_type}: {amenity.amenities_count || amenity.amenities_availablity}</span>
                                     </div>
                                 ))}
                             </ul>
-                        </div>
+                        </div> */}
                         {/* redirecting button (redirecting to the property  detail page ) */}
-                        <button onClick={() => handleNavigate(property)} className="bg-primary text-white rounded-md px-4 py-2 mt-4">View Details</button>
+                        <button onClick={() => handleNavigate(property.id)} className="bg-primary text-white rounded-md px-4 py-2 mt-4">View Details</button>
                     </div>
 
                 </div>

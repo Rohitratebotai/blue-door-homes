@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.jpeg';
+import logo from '../../../assets/iIra_images/iira_stay.jpg';
 import {
     FaFacebook, FaTwitter, FaYoutube, FaInstagram
 } from 'react-icons/fa';
@@ -20,80 +19,79 @@ const iconMap = {
     IoIosArrowForward
 };
 
-// type IconKey = keyof typeof iconMap;
-
 const Footer = () => {
     return (
-        <div className='py-10 md:py-10 px-4 lg:px-8 bg-black text-[#949494]'>
-            <div className='max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
+        <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-400 py-14 px-6 lg:px-12">
+            <div className="max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
                 {/* Logo Section */}
-                <div className='flex flex-col gap-7 items-center lg:items-center'>
-                    <img className='w-24 rounded-md' src={logo} alt="paymentlogo" />
-                    <div className='flex text-lg gap-6'>
+                <section className="flex flex-col items-center lg:items-start gap-6">
+                    <img
+                        className="w-28 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        src={logo}
+                        alt="The iIra Stays logo"
+                    />
+                    <nav aria-label="Social media links" className="flex gap-6 text-2xl">
                         {footerData.socialLinks.map(({ icon, link }, index) => {
                             const IconComponent = iconMap[icon];
                             return (
-                                <a key={index} href={link} target="_blank" rel="noopener noreferrer">
-                                    <IconComponent className='hover:text-white duration-300 cursor-pointer' />
+                                <a
+                                    key={index}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={icon.replace(/^Fa|^Im|^IoIos/, '')}
+                                    className="hover:text-white hover:scale-110 transition-all duration-300"
+                                >
+                                    <IconComponent />
                                 </a>
                             );
                         })}
-                    </div>
-                </div>
+                    </nav>
+                </section>
 
                 {/* Contact Information */}
-                <div className='text-center lg:text-left'>
-                    <h2 className='text-2xl text-white font-semibold mb-4'>Locate Us</h2>
-                    <div className='text-base flex flex-col gap-3'>
+                <section>
+                    <h2 className="text-2xl font-semibold text-white mb-6 relative">
+                        Locate Us
+                        <span className="block w-14 h-1 bg-blue-500 rounded mt-1"></span>
+                    </h2>
+                    <address className="not-italic flex flex-col gap-4 text-base">
                         {footerData.contactInfo.map(({ icon, text }, index) => {
                             const IconComponent = iconMap[icon];
                             return (
                                 <p
                                     key={index}
-                                    className='hover:text-white flex gap-2 justify-center lg:justify-start items-center cursor-pointer'
+                                    className="flex items-center gap-3 cursor-pointer hover:text-white transition-colors duration-300"
                                 >
-                                    <span><IconComponent /></span>
+                                    <IconComponent aria-hidden="true" className="text-lg text-blue-500" />
                                     <span>{text}</span>
                                 </p>
                             );
                         })}
-                    </div>
-                </div>
-
-                {/* Villas Links */}
-                <div className='text-center lg:text-left'>
-                    <h2 className='text-2xl text-white font-semibold mb-4'>Villas at a glance</h2>
-                    <div className='flex flex-col gap-3 text-base'>
-                        {footerData.villaLinks.map(({ icon, text, link }, index) => {
-                            const IconComponent = iconMap[icon];
-                            return (
-                                <Link
-                                    key={index}
-                                    to={link}
-                                    className='hover:text-white flex gap-2 justify-center lg:justify-start items-center cursor-pointer'
-                                >
-                                    <IconComponent />{text}
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </div>
+                    </address>
+                </section>
 
                 {/* Google Maps */}
-                <div className='flex flex-col items-center lg:items-start'>
+                <section className="flex justify-center lg:justify-start">
                     <iframe
                         src={footerData.mapSrc}
                         loading="lazy"
-                        className="w-full h-40"
-                    ></iframe>
-                </div>
+                        className="w-full h-48 rounded-xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-300"
+                        title="Location map"
+                        aria-label="Google Maps location"
+                    />
+                </section>
             </div>
 
+            <hr className="border-gray-800 mt-10" />
+
             {/* Copyright */}
-            <div className='text-base text-slate-300 text-center mt-10'>
-                © 2025 The Cloudnine All rights reserved | Designed By RateBotAi
-            </div>
-        </div>
+            <p className="text-center text-sm text-gray-500 mt-8 tracking-wide">
+                © {new Date().getFullYear()} The Blue Door Homes. All rights reserved.
+                <span className="block text-gray-600 mt-2">Designed By <a href='https://ratebotai.com/' className="text-blue-400">RateBotAi</a></span>
+            </p>
+        </footer>
     );
 };
 

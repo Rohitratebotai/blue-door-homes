@@ -6,30 +6,31 @@ import Homepage_Properties from "../../components/homepage_components/homepage_P
 import Homepage_Testimonial from "../../components/homepage_components/homepage_testimonial/Homepage_Testimonial"
 import Homepage_WhyChoose from "../../components/homepage_components/homepage_whychoose/Homepage_WhyChoose"
 import Slider from "../../components/homepage_components/slider/Slider"
-import img from '../../assets/parallax_img.jpg'
+import img from '../../assets/shaunnie/img_7.jpeg'
 
 const Home = () => {
     // Slider Images 
     return (
         <section className="relative font-roboto">
-            <div className="w-full h-screen">
+            <div className="w-full">
                 <Slider />
             </div>
             <div>
                 <Homepage_Properties />
             </div>
             <div>
-                <Parallax image={img} title={'Experience Luxury Across Three Stunning Properties'} description={'When you think of taking a holiday - what comes to mind? You taken far away, from the daily hustle and bustle of life! Close your eyes and imagine what that would be like. At Samudra Darshan we offer you a patch of holiday heaven right here on earth. Located just off the coast and within two minutes walk of Akshi Beach come experience the class, the luxury and the scenic beauty of Akshi beach.'} />
+                <Parallax image={img} title={'Gera Estate, Sai Agro Road, Mahabaleshwar, Maharashtra 412806'}
+                    description={'Nestled along Sai Agro Road in Mahabaleshwar, Gera Estate offers a peaceful getaway surrounded by the natural beauty of the hills. With its spacious layout, lush greenery, and easy access to local attractions, this property is perfect for families, couples, or groups seeking a refreshing escape. Whether you’re here to relax in the cool hill-station breeze or explore nearby strawberry farms and scenic viewpoints, Gera Estate blends comfort with the charm of Mahabaleshwar living.'} />
             </div>
-            <div className=" px-4 lg:px-20 ">
+            {/* <div className=" px-4 lg:px-20 ">
                 <Amenities />
-            </div>
-            <div className="">
+            </div> */}
+            {/* <div className="">
                 <Homepage_LetUsGuide />
-            </div>
-            <div className="">
+            </div> */}
+            {/* <div className="">
                 <Homepage_ExclusiveService />
-            </div>
+            </div> */}
             <div className="">
                 <Homepage_WhyChoose />
             </div>

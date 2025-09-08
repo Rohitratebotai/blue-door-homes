@@ -1,5 +1,5 @@
 
-import { FaSwimmingPool, FaCar, FaMusic, FaTv, FaWifi } from "react-icons/fa";
+import { FaCar, FaTv, FaWifi } from "react-icons/fa";
 import { MdWifiCalling3 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -12,21 +12,11 @@ interface AmenitiesData {
 const Amenities = () => {
 
     const amenitiesData: AmenitiesData[] = [
-        {
-            id: 1,
-            icon: <FaSwimmingPool />,
-            title: "Private Pool",
-        },
-        {
-            id: 2,
-            icon: <MdWifiCalling3 />,
-            title: "Service on call",
-        },
-        {
-            id: 3,
-            icon: <FaTv />,
-            title: "Flat-screen TV",
-        },
+        // {
+        //     id: 1,
+        //     icon: <FaSwimmingPool />,
+        //     title: "Private Pool",
+        // },
         {
             id: 4,
             icon: <FaWifi />,
@@ -38,10 +28,20 @@ const Amenities = () => {
             title: "Parking area",
         },
         {
-            id: 6,
-            icon: <FaMusic />,
-            title: "Sound system",
+            id: 2,
+            icon: <MdWifiCalling3 />,
+            title: "Service on call",
         },
+        {
+            id: 3,
+            icon: <FaTv />,
+            title: "Flat-screen TV",
+        },
+        // {
+        //     id: 6,
+        //     icon: <FaMusic />,
+        //     title: "Sound system",
+        // },
     ]
 
     return (
@@ -51,14 +51,14 @@ const Amenities = () => {
                 <div className="image w-full h-full flex-1 flex justify-center items-center gap-6">
                     <div className="flex flex-col gap-10">
                         <h3 className='text-2xl sm:text-3xl md:text-6xl font-medium'>The Essentials</h3>
-                        <p className="text-base text-justify md:text-xl font-light">Discover the exceptional amenities that make your stay at Aashiyaanaa Villas unforgettable! Whether you're looking to unwind, embark on an adventure, or enjoy a perfect blend of both, our villas provide a thoughtfully curated range of comforts and features, ensuring an extraordinary experience every time.</p>
+                        <p className="text-base text-justify md:text-xl font-light">Experience unparalleled comfort and luxury at iIRA Stays – Ocean Bliss! Whether you seek relaxation, adventure, or the perfect balance of both, our villas are designed to offer a seamless blend of elegance and convenience, ensuring a truly unforgettable stay.</p>
                         <Link to="/contact" className="text-primary font-semibold text-sm md:text-2xl">Know More...</Link>
                     </div>
                 </div>
                 {/* Amenities  */}
                 <div className="amenities w-full h-full flex-1 ">
                     <div className='h-full w-full px-3 sm:px-5 flex flex-col gap-4 sm:gap-6 md:gap-8 justify-center items-start'>
-                        <div className='icons w-full grid grid-cols-3 gap-5 md:gap-16'>
+                        <div className='icons w-full grid grid-cols-2 gap-5 md:gap-16'>
                             {
                                 amenitiesData?.map((item) => {
                                     return (

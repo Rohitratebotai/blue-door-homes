@@ -24,21 +24,29 @@ const Navbar = () => {
         closeMenu()
     };
 
+    const bookingURL = '';
+
     useEffect(() => {
         const onLoadfunction = () => {
             const navbar = document.getElementById('navbar_container');
             const navlinks = document.getElementById('navlinks');
+            // const bookingBtn = document.getElementById('bookingBtn');
+
             if (navbar && navlinks) {
                 if (window.scrollY > 20) {
                     navbar.classList.add('bg-black', 'border-b-1', 'border-bg-primary');
-                    navbar.classList.remove('bg-transparent', 'border-transparent');
+                    navbar.classList.remove('bg-white', 'border-transparent');
                     navlinks.classList.add('text-white');
                     navlinks.classList.remove('text-black');
+                    // bookingBtn.classList.add('bg-white', 'text-black');
+                    // bookingBtn.classList.remove('bg-primary', 'text-white');
                 } else {
-                    navbar.classList.add('bg-transparent', 'border-transparent');
+                    navbar.classList.add('bg-white', 'border-transparent');
                     navbar.classList.remove('bg-black', 'border-b-1', 'border-bg-primary');
                     navlinks.classList.add('text-black');
                     navlinks.classList.remove('text-white');
+                    // bookingBtn.classList.add('bg-primary', 'text-white');
+                    // bookingBtn.classList.remove('bg-white', 'text-black');
                 }
             }
         };
@@ -57,16 +65,27 @@ const Navbar = () => {
             <div className='flex justify-center bg-Bg_secondary items-center gap-4 p-4'>
                 <div className='flex items-center gap-2 font-semibold md:font-medium'>
                     <IoIosMail className='text-base md:text-2xl' />
-                    <span className='text-sm md:text-xl'>info@hotelscloudnine.com</span>
+                    {/* <span className='text-sm md:text-xl'>iirastays@gmail.com</span> */}
+                    <a
+                    href='mailto:iirastays@gmail.com'
+                    className='text-sm md:text-xl hover:underline'
+                >
+                    iirastays@gmail.com
+                </a>
                 </div>
                 <span className='text-slate-400 text-xl'>|</span>
                 <div className='flex items-center gap-2 font-semibold md:font-medium'>
                     <IoIosCall className='text-base md:text-xl' />
-                    <span className='text-sm md:text-xl'>7065890277</span>
+                    <a
+                    href='tel:7276882163'
+                    className='text-sm md:text-xl hover:underline'
+                >
+                    7276882163
+                </a>
                 </div>
             </div>
             {/* Main Nav */}
-            <div id='navbar_container' className='bg-transparent transition-all duration-300 border-b border-transparent w-full h-full flex items-center justify-between px-4 py-3 md:px-12'>
+            <div id='navbar_container' className='bg-white transition-all duration-300 border-b border-transparent w-full h-full flex items-center justify-between px-4 py-3 md:px-12'>
                 {/* Menu Toggle Button (for mobile) */}
                 <button className='md:hidden text-primary text-2xl' onClick={toggleMenu}>
                     {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
@@ -109,6 +128,13 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
+                    <button
+                        id='bookingBtn'
+                        onClick={() => window.open(bookingURL, '_blank')}
+                        className='bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-opacity-90 transition text-sm md:text-base'
+                    >
+                        Book Now
+                    </button>
                 </div>
             </div>
 
@@ -148,6 +174,16 @@ const Navbar = () => {
                     </ul>
                 </div>
             )}
+            {/*Book Now Button for Mobile Only*/}
+            <button
+                onClick={() => {
+                    window.open(bookingURL, '_blank');
+                    closeMenu();
+                }}
+                className='fixed bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition md:hidden z-[999] animate-bounce'
+            >
+                Book Now
+            </button>
         </section>
     );
 };
