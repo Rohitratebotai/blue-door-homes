@@ -3,8 +3,8 @@ import { propertyData } from "../../../data";
 // import Heading from "../../commonComponents/heading/Heading";
 import PropertyModal from "../propertymodal/PropertyModal";
 import { useState } from "react";
-import { BsFillEyeFill } from "react-icons/bs";
-
+// import { BsFillEyeFill } from "react-icons/bs";
+import { IoLocation } from "react-icons/io5";
 const Homepage_Properties = () => {
     const navigate = useNavigate();
 
@@ -20,14 +20,14 @@ const Homepage_Properties = () => {
         navigate(`/property_details/${id}`);
     };
 
-    const handleModal = (property: any) => () => {
-        setSelectedProperty(property);
-        setIsModalOpen(true);
-    };
+    // const handleModal = (property: any) => () => {
+    //     setSelectedProperty(property);
+    //     setIsModalOpen(true);
+    // };
 
     return (
         <>
-            <section className="px-4 lg:px-20 py-10 bg-gradient-to-b from-gray-50 to-white">
+            <section className="px-4 lg:px-20 pb-10 bg-gradient-to-b from-gray-50 to-white">
                 <section className="px-6 lg:px-20 pb-16 md:py-16">
                     {/* Main wrapper */}
                     <div className="w-full flex flex-col gap-10 md:gap-10 mx-auto ">
@@ -43,55 +43,42 @@ const Homepage_Properties = () => {
                             its optimistic innovation.
                         </div>
                     </div>
-
                 </section>
 
                 {/* cards  */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-1">
                     {propertyData.map((property: any) => (
                         <div
                             key={property.id}
                             className="bg-white transition-shadow duration-300 overflow-hidden"
                         >
-                            {/* Image Container */}
-                            <div className="h-56 relative w-full overflow-hidden">
+                            <div className="py-5 flex flex-col gap-7 order-1 sm:order-none">
+                                {/* Title + Address */}
+                                <span className="md:hidden w-full h-[1.5px] text-black bg-black"></span>
+                                <div className="flex flex-col gap-1">
+                                    <h2 className="text-2xl font-semibold text-gray-800">
+                                        {property.property_name}
+                                    </h2>
+                                    <p className="flex items-start gap-1 text-sm ">
+                                        <span className="pt-1 "><IoLocation /></span>{property.property_location}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Image Section (80vh height on mobile) */}
+                            <div
+                                className="relative overflow-hidden order-2 sm:order-none h-[80vh] md:h-[40vh] w-full">
                                 <img
                                     src={property.property_img[0]}
                                     alt={property.property_name}
                                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
                                     onClick={() => handleNavigate(property.id)}
                                 />
-
-                                {/* Eye Icon */}
-                                <button
-                                    onClick={(e) => {
-                                        e.stopPropagation(); // prevent parent click
-                                        handleModal(property);
-                                    }}
-                                    className="absolute top-4 right-4 z-30 text-gray-800 border rounded-full bg-white p-1 text-3xl opacity-80 hover:opacity-100"
-                                >
-                                    <BsFillEyeFill />
-                                </button>
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-5 flex flex-col gap-3">
-                                <h2 className="text-lg font-semibold text-gray-800">
-                                    {property.property_name}
-                                </h2>
-                                <p className="text-sm text-gray-500">{property.property_location}</p>
-                                <div className="mt-2">
-                                    <button
-                                        onClick={() => handleNavigate(property.id)}
-                                        className="px-4 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-100 transition-all duration-300"
-                                    >
-                                        Read More
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
             </section>
 
             {/* Modal */}

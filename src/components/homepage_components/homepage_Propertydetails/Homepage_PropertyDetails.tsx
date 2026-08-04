@@ -11,6 +11,7 @@ const PropertyDetails = () => {
     const [data, setData] = useState<any>(null);
     const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Refs for sections
     const aboutRef = useRef<HTMLDivElement>(null);
@@ -62,14 +63,14 @@ const PropertyDetails = () => {
     }
 
     return (
-        <div className="flex flex-col gap-10 w-full px-6 pt-40 pb-10 md:pt-40 sm:px-8 lg:px-32">
+        <div className="flex flex-col gap-1 md:gap-4 w-full px-4 pt-3 pb-10 md:pt-14 sm:px-8 lg:px-32">
 
             {/* Title & Location */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
                 <p className="text-2xl sm:text-3xl capitalize font-medium">
                     {data.property_name}
                 </p>
-                <p className="capitalize text-sm flex items-center gap-3 text-blue-500 cursor-pointer">
+                <p className="capitalize text-sm flex items-center gap-3 cursor-pointer">
                     <span className="text-xs">
                         <FaLocationDot />
                     </span>
@@ -81,7 +82,7 @@ const PropertyDetails = () => {
                 <div className="w-full flex flex-col gap-6">
 
                     {/* Main Image */}
-                    <div className="w-full h-64 md:h-96 lg:h-[450px] rounded-md overflow-hidden shadow-lg">
+                    <div className="w-full h-[70vh] md:h-96 lg:h-[450px] overflow-hidden shadow-lg">
                         <img
                             src={data.property_img[activeIndex]}
                             alt={`Property ${activeIndex + 1}`}
@@ -105,7 +106,7 @@ const PropertyDetails = () => {
                                 320: { slidesPerView: 3 },
                             }}
                             spaceBetween={10}
-                            className="w-full h-full rounded-md custom-swiper"
+                            className="w-full h-full custom-swiper"
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
                             onSlideChange={(swiper) => {
                                 setActiveIndex(swiper.realIndex);
@@ -118,7 +119,7 @@ const PropertyDetails = () => {
                                             onClick={() => setActiveIndex(index)}
                                             src={image}
                                             alt={`Property ${index + 1}`}
-                                            className={`w-full h-[90%] object-cover rounded-md cursor-pointer transition-all duration-200 ${activeIndex === index
+                                            className={`w-full h-[90%] object-cover cursor-pointer transition-all duration-200 ${activeIndex === index
                                                 ? "border-3 border-blue-500 shadow-lg scale-105"
                                                 : "border-1 border-gray-200 hover:border-blue-300"
                                                 }`}
@@ -138,7 +139,7 @@ const PropertyDetails = () => {
                     </div>
 
                     {/* Tabs */}
-                    <div className="flex justify-evenly w-full gap-6 shadow-xl border-gray-200 p-4 bg-white sticky top-[9.4rem] z-40">
+                    <div className="flex justify-evenly w-full gap-6 shadow-xl border-gray-200 p-4 bg-white sticky top-0 md:top-0 z-40">
                         {tabs.map((tab, index) => (
                             <button
                                 key={index}
@@ -189,19 +190,42 @@ const PropertyDetails = () => {
                         </div>
 
                         {/* Location / Map */}
+                        {/* Location / Map Section */}
                         <div className='scroll-mt-40' ref={locationRef}>
                             <h2 className="text-xl font-semibold mb-4 text-gray-800">Location</h2>
-                            <div className="border border-gray-200 rounded-lg overflow-hidden shadow-lg">
-                                <iframe
-                                    src={data.property_mapSrc}
-                                    loading="lazy"
-                                    className="w-full h-56 md:h-80"
-                                    allowFullScreen
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Property Location"
-                                ></iframe>
-                            </div>
+
+                            <button
+                                onClick={() => setIsModalOpen(true)}
+                                className="w-full border border-gray-300 rounded-lg py-3 text-center text-blue-600 font-medium hover:bg-blue-50 transition-all"
+                            >
+                                View on Google Maps
+                            </button>
                         </div>
+
+                        {/* Modal */}
+                        {isModalOpen && (
+                            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                                <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full p-4 relative">
+
+                                    {/* Close Button */}
+                                    <button
+                                        onClick={() => setIsModalOpen(false)}
+                                        className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl font-bold"
+                                    >
+                                        ✕
+                                    </button>
+
+                                    {/* Embedded Google Map */}
+                                    <iframe
+                                        src={data.property_mapSrc}
+                                        className="w-full h-96 rounded-lg"
+                                        allowFullScreen
+                                        loading="lazy"
+                                    ></iframe>
+
+                                </div>
+                            </div>
+                        )}
 
                     </div>
 

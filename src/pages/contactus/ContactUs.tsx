@@ -50,9 +50,9 @@ const ContactUs = () => {
     };
 
     return (
-        <section className=" py-20">
+        <section className="pb-20">
             {/* Banner */}
-            <div>
+            <div className="p-4">
                 <CommonBanner image={img} PageName={'Contact Us'} />
             </div>
 

@@ -24,12 +24,13 @@ const Navbar = () => {
         closeMenu()
     };
 
-    const bookingURL = '';
+    // const bookingURL = '';
 
     useEffect(() => {
         const onLoadfunction = () => {
             const navbar = document.getElementById('navbar_container');
             const navlinks = document.getElementById('navlinks');
+            const Title = document.getElementById('title');
             // const bookingBtn = document.getElementById('bookingBtn');
 
             if (navbar && navlinks) {
@@ -38,6 +39,8 @@ const Navbar = () => {
                     navbar.classList.remove('bg-white', 'border-transparent');
                     navlinks.classList.add('text-white');
                     navlinks.classList.remove('text-black');
+                    Title?.classList.add('text-white');
+                    Title?.classList.remove('text-black');
                     // bookingBtn.classList.add('bg-white', 'text-black');
                     // bookingBtn.classList.remove('bg-primary', 'text-white');
                 } else {
@@ -45,6 +48,8 @@ const Navbar = () => {
                     navbar.classList.remove('bg-black', 'border-b-1', 'border-bg-primary');
                     navlinks.classList.add('text-black');
                     navlinks.classList.remove('text-white');
+                    Title?.classList.add('text-black');
+                    Title?.classList.remove('text-white');
                     // bookingBtn.classList.add('bg-primary', 'text-white');
                     // bookingBtn.classList.remove('bg-white', 'text-black');
                 }
@@ -60,40 +65,44 @@ const Navbar = () => {
     }, []);
 
     return (
-        <section className='navbar-container w-full h-fit fixed top-0 z-50'>
+        // <section className='navbar-container w-full h-fit fixed top-0 z-50'>
+        <section className='navbar-container w-full'>
             {/* Email and Phone */}
-            <div className='flex justify-center bg-Bg_secondary items-center gap-4 p-4'>
+            <div className='hidden md:flex justify-center bg-Bg_secondary items-center gap-4 p-4'>
                 <div className='flex items-center gap-2 font-semibold md:font-medium'>
                     <IoIosMail className='text-base md:text-2xl' />
                     {/* <span className='text-sm md:text-xl'>iirastays@gmail.com</span> */}
                     <a
-                    href='mailto:iirastays@gmail.com'
-                    className='text-sm md:text-xl hover:underline'
-                >
-                    iirastays@gmail.com
-                </a>
+                        href='mailto:Bluedoor@gmail.com'
+                        className='text-sm md:text-xl hover:underline'
+                    >
+                        Bluedoor@gmail.com
+                    </a>
                 </div>
-                <span className='text-slate-400 text-xl'>|</span>
-                <div className='flex items-center gap-2 font-semibold md:font-medium'>
+                <span className=' text-slate-400 text-xl'>|</span>
+                <div className=' flex items-center gap-2 font-semibold md:font-medium'>
                     <IoIosCall className='text-base md:text-xl' />
                     <a
-                    href='tel:7276882163'
-                    className='text-sm md:text-xl hover:underline'
-                >
-                    7276882163
-                </a>
+                        href='tel:7276882163'
+                        className='text-sm md:text-xl hover:underline'
+                    >
+                        7276882163
+                    </a>
                 </div>
             </div>
             {/* Main Nav */}
-            <div id='navbar_container' className='bg-white transition-all duration-300 border-b border-transparent w-full h-full flex items-center justify-between px-4 py-3 md:px-12'>
+            <div id='navbar_container' className='bg-white transition-all duration-300 border-b border-transparent w-full h-full flex  items-center justify-between px-4 py-3 md:px-12'>
+                {/* Logo */}
+                <Link to='/'>
+                    {/* <img className='w-16 h-16 rounded-full' src={navbarData.logo[0].image} alt='Logo' /> */}
+                    <h2 id='title' className="text-2xl text-black md:text-3xl font-bold uppercase tracking-wide  drop-shadow-sm">
+                        Blue Door Homes
+                    </h2>
+                </Link>
                 {/* Menu Toggle Button (for mobile) */}
                 <button className='md:hidden text-primary text-2xl' onClick={toggleMenu}>
                     {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
                 </button>
-                {/* Logo */}
-                <Link to='/'>
-                    <img className='w-16 h-16 rounded-full' src={navbarData.logo[0].image} alt='Logo' />
-                </Link>
                 {/* Nav Links (Desktop) */}
                 <div id='navlinks' className='hidden md:flex items-center gap-4 text-black md:gap-8'>
                     <ul className='flex items-center gap-4 md:gap-8'>
@@ -128,19 +137,24 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-                    <button
+                    {/* <button
                         id='bookingBtn'
                         onClick={() => window.open(bookingURL, '_blank')}
                         className='bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-opacity-90 transition text-sm md:text-base'
                     >
                         Book Now
-                    </button>
+                    </button> */}
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className='md:hidden bg-Bg_secondary w-full absolute top-36 left-0 z-50'>
+                <div className='md:hidden bg-Bg_secondary w-full h-screen absolute top-0 left-0 z-50 translate-x-0'>
+                    <div className='md:hidden flex justify-end p-4'>
+                        <button className='bg-gray-200 p-2 rounded-xl  text-xl' onClick={toggleMenu}>
+                            {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
+                        </button>
+                    </div>
                     <ul className='flex flex-col items-start gap-4 p-4'>
                         {navbarData?.navmenu?.map((item) => (
                             <li key={item.id} className='w-full'>
@@ -175,7 +189,7 @@ const Navbar = () => {
                 </div>
             )}
             {/*Book Now Button for Mobile Only*/}
-            <button
+            {/* <button
                 onClick={() => {
                     window.open(bookingURL, '_blank');
                     closeMenu();
@@ -183,7 +197,7 @@ const Navbar = () => {
                 className='fixed bottom-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-opacity-90 transition md:hidden z-[999] animate-bounce'
             >
                 Book Now
-            </button>
+            </button> */}
         </section>
     );
 };

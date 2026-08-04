@@ -10,15 +10,16 @@ import img from '../../../assets/shaunnie/img_13.jpeg';
 const Slider = () => {
 
     const images = [
-        { id: 1, src: img1, alt: 'Image 1' },
+        { id: 1, src: img, alt: 'Image 1' },
         { id: 2, src: img2, alt: 'Image 2' },
         { id: 3, src: img3, alt: 'Image 3' },
+        { id: 4, src: img1, alt: 'Image 4' },
     ];
 
     return (
         <>
             <section className='md:hidden w-full flex justify-center items-center '>
-                <div className='p-5 w-full h-[70vh]'>
+                <div className='p-5 pt-0 w-full h-[80vh]'>
                     <img src={img} className='w-full h-full object-cover' alt="Banner image " />
                 </div>
             </section>

@@ -1,4 +1,4 @@
-import logo from "../src/assets/iIra_images/iira_stay.jpg";
+import logo from "../src/assets/ChatGPT Image Oct 4, 2025, 04_13_39 PM.png";
 
 // import img1 from './assets/HomePage_banner1.jpg'
 // import img2 from './assets/HomePage_banner1.jpg'
@@ -52,9 +52,9 @@ import Limg15 from './assets/loki/img_1.jpeg';
 export const propertyData = [
     {
         id: 1,
-        property_name: "Shaunnie - Blue Door Homes",
+        property_name: "Shaunnie",
         property_description: "Step into a bright, stylish apartment where comfort meets design. The inviting living area, adorned with lush indoor plants, cozy seating, and warm lighting, opens to a private balcony with sweeping city views. The serene bedroom features a plush double bed dressed in soft linens and bathed in natural light. Vibrant rugs and earthy wooden accents bring charm and character to the modern living room, creating a space that’s both relaxing and inspiring. Ideal for couples or solo travelers, this urban retreat offers a refreshing blend of style and tranquility.",
-        property_location: "Mitra Samuh Apts, Morave Road, Sector 3, Ulwe",
+        property_location: "Ulwe, Navi Mumbai",
         property_img: [shaunniebanner, simg1, simg2, simg3, simg4, simg5, simg6, simg7, simg8, simg9, simg10],
         // property_brandId: "194",
         property_amenities: [
@@ -106,14 +106,14 @@ export const propertyData = [
             "Wet’nJoy Water Park & Amusement Park"
         ],
         property_mapSrc:
-            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d309.32487521499!2d73.48817029248998!3d18.747525455358236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQ0JzUyLjEiTiA3M8KwMjknMTYuNiJF!5e0!3m2!1sen!2sin!4v1756966472924!5m2!1sen!2sin"
+            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3772.7900812895878!2d73.02494399999999!3d18.984876000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU5JzA1LjYiTiA3M8KwMDEnMjkuOCJF!5e0!3m2!1sen!2sin!4v1764856044532!5m2!1sen!2sin"
     },
     {
         id: 2,
-        property_name: "Mojo - Blue Door Homes",
+        property_name: "Mojo",
         property_description:
             "Modern comfort with a touch of warmth — this inviting 2-bedroom stay combines stylish elegance with cozy charm. One bedroom embraces soft, calming neutrals, while the other bursts with vibrant, modern energy. Spend your mornings basking in the sunlit living room, enjoy a quiet moment in the snug reading nook, or unwind under the quilts in the boho-inspired bedrooms. A perfect blend of relaxation and style awaits.",
-        property_location: "Mitra Samuh Apts, Morave Road, Sector 3, Ulwe",
+        property_location: "Ulwe, Navi Mumbai",
         property_img: [MojoBanner, Mimg1, Mimg2, Mimg3, Mimg4, Mimg5, Mimg6, Mimg7, Mimg8, Mimg9],
         property_amenities: [
             { amenities_icon: "bed" },
@@ -158,14 +158,14 @@ export const propertyData = [
             "Wet’nJoy Water Park & Amusement Park"
         ],
         property_mapSrc:
-            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d309.32487521499!2d73.48817029248998!3d18.747525455358236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQ0JzUyLjEiTiA3M8KwMjknMTYuNiJF!5e0!3m2!1sen!2sin!4v1756966472924!5m2!1sen!2sin"
+            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3772.7900812895878!2d73.02494399999999!3d18.984876000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU5JzA1LjYiTiA3M8KwMDEnMjkuOCJF!5e0!3m2!1sen!2sin!4v1764856044532!5m2!1sen!2sin"
     },
     {
         id: 3,
-        property_name: "Loki - Blue Door Homes",
+        property_name: "Loki",
         property_description:
             "Shrirang Villa is a luxurious 4BHK private retreat nestled in the serene hills of Malavli, near Lonavala. Perfect for families, friends, and group getaways, the villa offers spacious bedrooms, modern amenities, and a private swimming pool surrounded by lush greenery. Guests can relax in the cozy living spaces, enjoy outdoor games, or simply soak in the breathtaking views of the Sahyadri ranges. With its blend of comfort and elegance, Shrirang Villa promises a memorable escape just a short drive from Mumbai and Pune.",
-        property_location: "Plot No 28, Sai Agro Resort Rd, near Gera Heights",
+        property_location: "Mahabaleshwar, MH",
         property_img: [LokiBanner, Limg1, Limg2, Limg3, Limg4, Limg5, Limg6, Limg7, Limg8, Limg9, Limg10, Limg11, Limg12, Limg13, Limg14, Limg15],
         property_amenities: [
             { amenities_icon: "bed" },
@@ -210,7 +210,7 @@ export const propertyData = [
             "Wet’nJoy Water Park & Amusement Park"
         ],
         property_mapSrc:
-            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d309.32487521499!2d73.48817029248998!3d18.747525455358236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDQ0JzUyLjEiTiA3M8KwMjknMTYuNiJF!5e0!3m2!1sen!2sin!4v1756966472924!5m2!1sen!2sin"
+            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3795.2414115762085!2d73.665476!3d17.967502000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU4JzAzLjAiTiA3M8KwMzknNTUuNyJF!5e0!3m2!1sen!2sin!4v1764856188237!5m2!1sen!2sin"
     },
 ];
 
@@ -335,10 +335,10 @@ export const iconMap: IconMapping = {
 
 export const footerData: FooterDataInterface = {
     socialLinks: [
-        { icon: 'FaFacebook', link: 'https://facebook.com' },
+        // { icon: 'FaFacebook', link: 'https://facebook.com' },
         // { icon: 'FaTwitter', link: 'https://twitter.com' },
-        { icon: 'FaInstagram', link: 'https://instagram.com' },
-        { icon: 'FaYoutube', link: 'https://youtube.com' },
+        { icon: 'FaInstagram', link: 'https://www.instagram.com/bluedoorhome?igsh=MXZyZDV2dWYzYmVvbg==' },
+        // { icon: 'FaYoutube', link: 'https://youtube.com' },
     ],
     contactInfo: [
         { icon: 'IoIosMail', text: 'bluedoorhomesforyou@gmail.com' },

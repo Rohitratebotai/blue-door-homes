@@ -6,10 +6,10 @@ import Parallax from "../../components/commonComponents/parallax/Parallax"
 const About = () => {
     return (
         <section>
-            <div>
+            <div className="p-4">
                 <CommonBanner image={img1} PageName={'About Us'} />
             </div>
-            <div className="tracking-wide py-20 px-8 lg:px-32 flex flex-col gap-8 text-justify">
+            <div className="tracking-wide  px-8 lg:px-32 flex flex-col gap-0 md:gap-8 text-justify">
                 {/* title */}
                 <div>
                     <span className="text-4xl font-medium">

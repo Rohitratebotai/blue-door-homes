@@ -11,7 +11,7 @@ import img from '../../assets/shaunnie/img_7.jpeg'
 const Home = () => {
     // Slider Images 
     return (
-        <section className="relative font-roboto">
+        <section className="relative !font-[Inter]">
             <div className="w-full">
                 <Slider />
             </div>
