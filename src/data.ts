@@ -1,8 +1,4 @@
-import logo from "../src/assets/ChatGPT Image Oct 4, 2025, 04_13_39 PM.png";
-
-// import img1 from './assets/HomePage_banner1.jpg'
-// import img2 from './assets/HomePage_banner1.jpg'
-// import img3 from './assets/HomePage_banner1.jpg'
+import logo from "../src/assets/logo.png";
 
 // property images for shaunnie 
 import shaunniebanner from './assets/shaunnie/img_6.jpeg'
@@ -46,6 +42,14 @@ import Limg12 from './assets/loki/img_16.jpeg';
 import Limg13 from './assets/loki/img_23.jpeg';
 import Limg14 from './assets/loki/img_8.jpeg';
 import Limg15 from './assets/loki/img_1.jpeg';
+
+// property images of the binks 
+import binkimg1 from './assets/binks/img1.avif'
+import binkimg2 from './assets/binks/img2.avif'
+import binkimg3 from './assets/binks/img3.avif'
+import binkimg4 from './assets/binks/img4.avif'
+import binkimg5 from './assets/binks/img5.avif'
+import binkimg6 from './assets/binks/img6.avif'
 
 
 // All Properties Data
@@ -110,7 +114,7 @@ export const propertyData = [
     },
     {
         id: 2,
-        property_name: "Mojo",
+        property_name: "Mojo - 1BHK",
         property_description:
             "Modern comfort with a touch of warmth — this inviting 2-bedroom stay combines stylish elegance with cozy charm. One bedroom embraces soft, calming neutrals, while the other bursts with vibrant, modern energy. Spend your mornings basking in the sunlit living room, enjoy a quiet moment in the snug reading nook, or unwind under the quilts in the boho-inspired bedrooms. A perfect blend of relaxation and style awaits.",
         property_location: "Ulwe, Navi Mumbai",
@@ -211,6 +215,110 @@ export const propertyData = [
         ],
         property_mapSrc:
             "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3795.2414115762085!2d73.665476!3d17.967502000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU4JzAzLjAiTiA3M8KwMzknNTUuNyJF!5e0!3m2!1sen!2sin!4v1764856188237!5m2!1sen!2sin"
+    },
+    {
+        id: 4,
+        property_name: "Binks",
+        property_description:
+            "Binks is our charming studio 1Rk that proves big style comes in intimate packages. cleverly laid out for smart functional zones for solo travellers or couples",
+        property_location: "Ulve Navi Mumbai",
+        property_img: [binkimg1, binkimg2, binkimg3, binkimg4, binkimg5, binkimg6],
+        property_amenities: [
+            { amenities_icon: "bed" },
+            { amenities_icon: "shower" },
+            { amenities_icon: "pool" },
+            { amenities_icon: "car" },
+            { amenities_icon: "wifi" },
+            { amenities_icon: "ac" },
+            { amenities_icon: "Laundry Service" },
+            { amenities_icon: "card payment" },
+            { amenities_icon: "breakfast" },
+            { amenities_icon: "newspaper" },
+            { amenities_icon: "cleaning" },
+            { amenities_icon: "luggage" },
+            { amenities_icon: "tv" },
+            { amenities_icon: "security" },
+            { amenities_icon: "lift" },
+            { amenities_icon: "power backup" },
+            { amenities_icon: "parking" },
+            { amenities_icon: "outdoor games" },
+            { amenities_icon: "indoor games" },
+            { amenities_icon: "24-Hour Front Desk" },
+            { amenities_icon: "Toilet Paper" },
+            { amenities_icon: "Fire Exit" },
+            { amenities_icon: "Fire Extinguishers" },
+            { amenities_icon: "DTH Channels" },
+            { amenities_icon: "Outside Food Allowed" }
+        ],
+        property_nearplaces: [
+            "Lohagad Fort",
+            "Visapur Fort",
+            "Karla Caves",
+            "Bhaja Caves",
+            "Ekvira Devi Temple",
+            "Pawna Lake",
+            "Lion’s Point",
+            "Tiger Point",
+            "Lonavala Lake",
+            "Khandala Viewpoints",
+            "Bhushi Dam",
+            "Wax Museum Lonavala",
+            "Wet’nJoy Water Park & Amusement Park"
+        ],
+        property_mapSrc:
+            "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1780.5433854318885!2d73.02623689032383!3d18.982670753001155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1791540103951!5m2!1sen!2sin"
+    },
+    {
+        id: 5,
+        property_name: "Mojo - 2BHK",
+        property_description:
+            "Modern comfort with a touch of warmth — this inviting 2-bedroom stay combines stylish elegance with cozy charm. One bedroom embraces soft, calming neutrals, while the other bursts with vibrant, modern energy. Spend your mornings basking in the sunlit living room, enjoy a quiet moment in the snug reading nook, or unwind under the quilts in the boho-inspired bedrooms. A perfect blend of relaxation and style awaits.",
+        property_location: "Ulwe, Navi Mumbai",
+        property_img: [Mimg4, Mimg5, Mimg6, Mimg7, Mimg8, Mimg9, MojoBanner, Mimg1, Mimg2, Mimg3],
+        property_amenities: [
+            { amenities_icon: "bed" },
+            { amenities_icon: "shower" },
+            { amenities_icon: "pool" },
+            { amenities_icon: "car" },
+            { amenities_icon: "wifi" },
+            { amenities_icon: "ac" },
+            { amenities_icon: "Laundry Service" },
+            { amenities_icon: "card payment" },
+            { amenities_icon: "breakfast" },
+            { amenities_icon: "newspaper" },
+            { amenities_icon: "cleaning" },
+            { amenities_icon: "luggage" },
+            { amenities_icon: "tv" },
+            { amenities_icon: "security" },
+            { amenities_icon: "lift" },
+            { amenities_icon: "power backup" },
+            { amenities_icon: "parking" },
+            { amenities_icon: "outdoor games" },
+            { amenities_icon: "indoor games" },
+            { amenities_icon: "24-Hour Front Desk" },
+            { amenities_icon: "Toilet Paper" },
+            { amenities_icon: "Fire Exit" },
+            { amenities_icon: "Fire Extinguishers" },
+            { amenities_icon: "DTH Channels" },
+            { amenities_icon: "Omutside Food Allowed" }
+        ],
+        property_nearplaces: [
+            "Lohagad Fort",
+            "Visapur Fort",
+            "Karla Caves",
+            "Bhaja Caves",
+            "Ekvira Devi Temple",
+            "Pawna Lake",
+            "Lion’s Point",
+            "Tiger Point",
+            "Lonavala Lake",
+            "Khandala Viewpoints",
+            "Bhushi Dam",
+            "Wax Museum Lonavala",
+            "Wet’nJoy Water Park & Amusement Park"
+        ],
+        property_mapSrc:
+            "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3772.7900812895878!2d73.02494399999999!3d18.984876000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU5JzA1LjYiTiA3M8KwMDEnMjkuOCJF!5e0!3m2!1sen!2sin!4v1764856044532!5m2!1sen!2sin"
     },
 ];
 

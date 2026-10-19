@@ -21,27 +21,39 @@ const Homepage_Testimonial = () => {
         },
         {
             review:
-                "Perfect stay! The location in Ulwe is very convenient, close to shops and transport. The property was neat, well-maintained, and value for money.",
+                "Perfect stay! The location in Ulwe is very convenient, close to shops and transport. The property was neat, well-maintained, and value for money.- Shaunnie",
             clientName: "Sneha Patil",
             rating: 5,
         },
         {
             review:
-                "I stayed at Blue Door Homes with my family and we absolutely loved the warmth of the place. The staff was very helpful and made our stay stress-free.",
+                "I stayed at Blue Door Homes with my family and we absolutely loved the warmth of the place. The staff was very helpful and made our stay stress-free. - Loki",
             clientName: "Amit Khanna",
-            rating: 4,
-        },
-        {
-            review:
-                "A wonderful experience! The rooms were clean, spacious, and stylish. Special thanks to the team for making our stay so comfortable.",
-            clientName: "Priya Nair",
             rating: 5,
         },
         {
             review:
-                "The property feels welcoming and peaceful. Great interiors, good amenities, and friendly hosts. Would definitely come back!",
-            clientName: "Vikram Desai",
-            rating: 4,
+                "Cozy, private, clean and aesthetic! Always love returning to blue doors, thankyou so much Ganesh for the help throughout. - Mojo 1BHK",
+            clientName: "Ruchika",
+            rating: 5,
+        },
+        {
+            review:
+                "Top noch stay, cool host nd the place is full of vibe absolute love the stay, thanks for hosting 11/10 stay - Mojo 2BHK",
+            clientName: "Meenakshi",
+            rating: 5,
+        },
+        {
+            review:
+                "Very peaceful home, exactly as seen in pictures, easy to locate and very helpful responsive host - Binks",
+            clientName: "Kritika",
+            rating: 5,
+        },
+        {
+            review:
+                "It was clean and in a good location. - Binks",
+            clientName: "KenIchi",
+            rating: 5,
         },
     ];
 

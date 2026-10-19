@@ -19,7 +19,7 @@ const Slider = () => {
     return (
         <>
             <section className='md:hidden w-full flex justify-center items-center '>
-                <div className='p-5 pt-0 w-full h-[80vh]'>
+                <div className='p-1 pt-0 w-full h-[80vh]'>
                     <img src={img} className='w-full h-full object-cover' alt="Banner image " />
                 </div>
             </section>

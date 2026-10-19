@@ -7,6 +7,7 @@ import Homepage_Testimonial from "../../components/homepage_components/homepage_
 import Homepage_WhyChoose from "../../components/homepage_components/homepage_whychoose/Homepage_WhyChoose"
 import Slider from "../../components/homepage_components/slider/Slider"
 import img from '../../assets/shaunnie/img_7.jpeg'
+import FAQ from "../../components/homepage_components/FAQ"
 
 const Home = () => {
     // Slider Images 
@@ -19,8 +20,8 @@ const Home = () => {
                 <Homepage_Properties />
             </div>
             <div>
-                <Parallax image={img} title={'Gera Estate, Sai Agro Road, Mahabaleshwar, Maharashtra 412806'}
-                    description={'Nestled along Sai Agro Road in Mahabaleshwar, Gera Estate offers a peaceful getaway surrounded by the natural beauty of the hills. With its spacious layout, lush greenery, and easy access to local attractions, this property is perfect for families, couples, or groups seeking a refreshing escape. Whether you’re here to relax in the cool hill-station breeze or explore nearby strawberry farms and scenic viewpoints, Gera Estate blends comfort with the charm of Mahabaleshwar living.'} />
+                <Parallax image={img} title={'Mahabaleshwar'}
+                    description={'Nestled along Sai Agro Road in Mahabaleshwar, Gera Estate offers a peaceful getaway surrounded by the natural beauty of the hills. With its spacious layout, lush greenery, and easy access to local attractions, this property is perfect for families, couples, or groups seeking a refreshing escape.'} />
             </div>
             {/* <div className=" px-4 lg:px-20 ">
                 <Amenities />
@@ -33,6 +34,9 @@ const Home = () => {
             </div> */}
             <div className="">
                 <Homepage_WhyChoose />
+            </div>
+            <div>
+                <FAQ />
             </div>
             <div className="">
                 <Homepage_Testimonial />

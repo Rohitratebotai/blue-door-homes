@@ -47,7 +47,7 @@ const Homepage_WhyChoose = () => {
 
     return (
         <section className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
-            <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-20">
+            <div className="max-w-7xl mx-auto px-2 sm:px-10 lg:px-20">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
                     {/* Left Side - Images */}
                     <div className="flex-1 relative">
@@ -64,32 +64,39 @@ const Homepage_WhyChoose = () => {
 
                     {/* Right Side - Content */}
                     <div className="flex-1">
-                        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 relative mb-4">
+                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 relative mb-4">
                             {featureData.title}
                             <span className="absolute -bottom-2 left-0 w-1/4 h-1 bg-primary rounded-full"></span>
                         </h2>
-                        <p className="text-gray-600 leading-relaxed mb-6">{featureData.description}</p>
+
+                        <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
+                            {featureData.description}
+                        </p>
 
                         {/* Features List */}
-                        <div className="space-y-5 mb-10">
+                        <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-8">
                             {featureData.features.map((feature, index) => (
                                 <div
                                     key={index}
-                                    className={`p-2 rounded-lg transition-all duration-300 cursor-pointer flex items-start gap-4 border-l-4 ${activeFeature === index
-                                        ? 'bg-white shadow-lg border-primary'
-                                        : 'border-transparent hover:bg-white hover:shadow-md'
+                                    className={`p-1 sm:p-3 rounded-lg transition-all duration-300 cursor-pointer flex items-start gap-2 sm:gap-3 border-l-4 ${activeFeature === index
+                                            ? 'bg-white shadow-lg border-primary'
+                                            : 'border-transparent hover:bg-white hover:shadow-md'
                                         }`}
                                     onClick={() => setActiveFeature(index)}
                                 >
                                     <div
-                                        className={`p-2 rounded-full ${activeFeature === index ? 'bg-primary text-white' : 'bg-primary/10 text-primary'
+                                        className={`p-1 sm:p-2 rounded-full shrink-0 ${activeFeature === index
+                                                ? 'bg-primary text-white'
+                                                : 'bg-primary/10 text-primary'
                                             }`}
                                     >
-                                        <MdOutlineDone className="text-xl" />
+                                        <MdOutlineDone className="text-base sm:text-xl" />
                                     </div>
-                                    <div>
-                                        <h3 className="text-gray-900 font-semibold text-lg">{feature.title}</h3>
-                                        <p className="text-gray-600 mt-1">{feature.description}</p>
+
+                                    <div className="min-w-0">
+                                        <h3 className="text-sm sm:text-base lg:text-lg text-gray-900 font-semibold leading-snug">
+                                            {feature.title}
+                                        </h3>
                                     </div>
                                 </div>
                             ))}
@@ -99,7 +106,7 @@ const Homepage_WhyChoose = () => {
                         <div className="flex justify-center lg:justify-start">
                             <Link
                                 to="/contact"
-                                className="bg-primary text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition duration-300 hover:bg-primary-dark hover:shadow-lg transform hover:-translate-y-1"
+                                className="bg-primary text-white px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base rounded-lg font-medium flex items-center gap-2 transition duration-300 hover:bg-primary-dark hover:shadow-lg transform hover:-translate-y-1"
                             >
                                 <span>Contact Us</span>
                                 <FaArrowRightLong />

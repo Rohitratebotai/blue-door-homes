@@ -91,13 +91,11 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Main Nav */}
-            <div id='navbar_container' className='bg-white transition-all duration-300 border-b border-transparent w-full h-full flex  items-center justify-between px-4 py-3 md:px-12'>
+            <div id='navbar_container' className='bg-white transition-all duration-300 border-b border-transparent w-full h-full flex  items-center justify-between px-2 py-2 md:px-12'>
                 {/* Logo */}
                 <Link to='/'>
-                    {/* <img className='w-16 h-16 rounded-full' src={navbarData.logo[0].image} alt='Logo' /> */}
-                    <h2 id='title' className="text-2xl text-black md:text-3xl font-bold uppercase tracking-wide  drop-shadow-sm">
-                        Blue Door Homes
-                    </h2>
+                    <img className='w-16 h-16 rounded-full' src={navbarData.logo[0].image} alt='Logo' />
+                   
                 </Link>
                 {/* Menu Toggle Button (for mobile) */}
                 <button className='md:hidden text-primary text-2xl' onClick={toggleMenu}>
